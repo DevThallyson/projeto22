@@ -1,41 +1,53 @@
-/* Estilo da barra lateral */
-.sidenav {
-    background-color: #0e0230; /* Fundo azul escuro */
-    width: 200px; /* Largura fixa */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a0a0a; /* Preto mais sólido */
+  padding: 0 30px;
+  height: 64px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 255, 255, 0.1); /* leve brilho */
 }
 
-/* Estilo dos links na barra lateral */
-.sidenav a{
-    color: #fff; /* Texto branco */
+.left-section,
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-/* Espaçamento entre ícones e texto nos links */
-.sidenav i {
-    padding-right: 10px;
+.logo-img {
+  height: 42px;
+  transition: transform 0.2s ease-in-out;
 }
 
-/* Estilo do conteúdo principal */
-.content {
-    padding: 17px; /* Espaçamento interno */
-    background-color: #13141f; /* Fundo branco */
+.logo-img:hover {
+  transform: scale(1.05);
 }
 
-/* Cor padrão dos ícones */
-.material-icons {
-    color: #ffffff; /* Preto */
-}
-/* Efeito de brilho ao passar o mouse */
-.sidenav a:hover {
-    background-color: #140342; /* Leve alteração na cor de fundo */
-    font-size: 16px; /* Define o tamanho da fonte do texto do botão */
-    border-radius: 5px; /* Define bordas arredondadas */
-    margin: 5px 0; /* Margem entre os links */
-    padding: 10px; /* Espaçamento interno */    
-    height: 40px; /* Define a altura do botão */
-    width: 100%; /* Largura total */
-    transition: all 0.3s ease; /* Suaviza as mudanças de estilo */
+a[mat-button] {
+  color: #00f7ff; /* Ciano neon */
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
 }
 
-span{
-    color: #ffffff;
+a[mat-button]:hover {
+  background-color: rgba(0, 247, 255, 0.1);
+  transform: translateY(-1px);
+  box-shadow: 0 0 5px rgba(0, 247, 255, 0.3);
+}
+.header .logo {
+    max-height: 80px; /* Define altura máxima do logo */
 }
