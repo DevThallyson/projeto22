@@ -1,24 +1,30 @@
 /* GIF animado de fundo */
 .gif-background {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url('https://media.tenor.com/jRnJumDrkdcAAAAC/galaxy-space.gif') no-repeat center center fixed;
-    background-size: cover;
-    z-index: -1;
-    opacity: 0.15;
-  }
-  
-  .gif-background::after {
-    content: "";
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* escurecimento leve para legibilidade */
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none; /* evita que o fundo capture cliques */
+}
+
+.gif-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExc243aDA0Z2c0cTVxbmhyNmpqeGFwOHJ6cjJqZnZqNnI4cG16bzRzNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jaOXKCxtBPLieRLI0c/giphy.gif') no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.15;
+}
+
+.gif-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* escurecimento adicional */
+}
+
   /* Layout principal */
   .galaxy-dashboard {
     position: relative;
