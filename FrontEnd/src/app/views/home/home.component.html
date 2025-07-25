@@ -1,7 +1,7 @@
-<!-- Fundo com GIF animado -->
+<!-- Fundo animado -->
 <div class="gif-background"></div>
 
-<!-- Conteúdo principal do dashboard -->
+<!-- Conteúdo principal -->
 <div class="galaxy-dashboard">
   <h2 class="dashboard-title">🌌 Painel de Controle</h2>
 
@@ -14,22 +14,20 @@
       </div>
     </div>
 
-    <div class="space-card">
+    <div class="space-card" [ngClass]="{'alert': productCount === 0}">
       <i class="material-icons">satellite_alt</i>
       <div>
         <h3>Produtos no Armazém</h3>
-        <p>0</p>
+        <p>{{ productCount }}</p>
       </div>
     </div>
 
-    <div class="space-card">
+    <div class="space-card" [ngClass]="{'alert': estoqueBaixo > 0}">
       <i class="material-icons">group</i>
       <div>
-        <h3>Clientes Conectados</h3>
-        <p>1</p>
+        <h3>Estoque Baixo</h3>
+        <p>{{ estoqueBaixo }}</p>
       </div>
     </div>
-
-    
   </div>
 </div>
